@@ -11,7 +11,7 @@ namespace OrderDemo.Services.ShippingServices
         }
         public double GetCost(Order order)
         {
-            if (order.GetTotal() > 200)
+            if (order.GetTotal() > 4)
             {
                 return 0;
             }

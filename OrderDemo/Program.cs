@@ -5,7 +5,6 @@ class Program
 {
     static void Main(string[] args)
     {
-        Console.Clear();
         Order order = new Order();
         Sea sea = new Sea();
         Ground ground = new Ground();
@@ -22,6 +21,7 @@ class Program
             {
                 case "1":
                     {
+                        Console.Clear();
                         order.SetShippingType(ground);
                         Console.WriteLine(order.GetShippingCost());
                         Console.WriteLine();
@@ -29,6 +29,7 @@ class Program
                     break;
                 case "2":
                     {
+                        Console.Clear();
                         order.SetShippingType(air);
                         Console.WriteLine(order.GetShippingCost());
                         Console.WriteLine();
@@ -36,6 +37,7 @@ class Program
                     break;
                 case "3":
                     {
+                        Console.Clear();
                         order.SetShippingType(sea);
                         Console.WriteLine(order.GetShippingCost());
                         Console.WriteLine();
@@ -43,6 +45,7 @@ class Program
                     break;
                 case "4":
                     {
+                        Console.Clear();
                         Item item = new Item();
                         Console.Write("Name "); item.Name = Console.ReadLine();
                         Console.Write("Weight "); item.Weight = Convert.ToDouble(Console.ReadLine());
