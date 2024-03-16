@@ -9,5 +9,6 @@ namespace OrderDemo.Models
         void SetShippingType(IShipping shipping);
         double GetShippingCost();
         DateTime GetShippingDate();
+        void AddItem(Item item);
     }
 }

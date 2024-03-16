@@ -11,11 +11,12 @@ class Program
         Ground ground = new Ground();
         Air air = new Air();
 
+        string userChoise;
         do
         {
             PrintMenu();
             Console.Write("Enter choice : ");
-            string userChoise = Console.ReadLine();
+            userChoise = Console.ReadLine();
 
             switch (userChoise)
             {
@@ -40,13 +41,23 @@ class Program
                         Console.WriteLine();
                     }
                     break;
+                case "4":
+                    {
+                        Item item = new Item();
+                        Console.Write("Name "); item.Name = Console.ReadLine();
+                        Console.Write("Weight "); item.Weight = Convert.ToDouble(Console.ReadLine());
+                        order.AddItem(item);
+                    }
+                    break;
             }
-        } while (true);
+        } while (userChoise != "5");
     }
     static void PrintMenu()
     {
         Console.WriteLine("1.Air");
         Console.WriteLine("2.Ground");
         Console.WriteLine("3.Sea");
+        Console.WriteLine("4.Add Item");
+        Console.WriteLine("5.Exit");
     }
 }

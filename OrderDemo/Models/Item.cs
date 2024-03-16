@@ -3,6 +3,6 @@
     public class Item
     {
         public string Name { get; set; }
-        public decimal Weight { get; set; }
+        public double Weight { get; set; }
     }
 }

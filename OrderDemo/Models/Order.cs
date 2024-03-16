@@ -10,6 +10,12 @@ namespace OrderDemo.Models
         {
             items = new List<Item>();
         }
+
+        public void AddItem(Item item)
+        {
+            this.items.Add(item);
+        }
+
         public double GetShippingCost()
         {
             return shipping.GetCost(this);
